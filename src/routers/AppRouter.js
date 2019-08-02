@@ -1,5 +1,5 @@
 import React from 'react';
-import {BrowserRouter, Route, Switch} from 'react-router-dom';
+import {HashRouter, Route, Switch} from 'react-router-dom';
 import Home from '../components/Home';
 import Projects from '../components/Projects';
 import Goals from '../components/Goals';
@@ -13,7 +13,7 @@ import Header from '../components/Header';
 const AppRouter = () => {
     return (
         <div>
-            <BrowserRouter>
+            <HashRouter>
                 <Header />
                 <Switch>
                     <Route path='/' component={Home} exact={true} />
@@ -24,7 +24,7 @@ const AppRouter = () => {
                     <Route path='/contact' component={Contact} />
                     <Route component={NotFoundPage} />
                 </Switch>
-            </BrowserRouter>
+            </HashRouter>
         </div>
     );
 };
